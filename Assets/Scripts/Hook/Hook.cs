@@ -16,7 +16,7 @@ public class Hook : MonoBehaviour
 
     private bool canMove;
 
-    //List<Fish>
+    private List<Fish> hookedFishes;
 
     private Tweener cameraTween;
 
@@ -24,7 +24,7 @@ public class Hook : MonoBehaviour
     {
         mainCamera = Camera.main;
         myCollider = GetComponent<Collider2D>();
-        //List<Fish>
+        hookedFishes = new List<Fish>();
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class Hook : MonoBehaviour
         //screen(GAME)
         myCollider.enabled = false;
         canMove = true;
-        //CLEAR HOOK
+        hookedFishes.Clear();
 
     }
 
@@ -86,9 +86,40 @@ public class Hook : MonoBehaviour
             transform.position = Vector2.down * 6;
             myCollider.enabled = true;
             int num = 0;
-            //clear fishes
+            for(int i = 0; i < hookedFishes.Count; i++)
+            {
+                hookedFishes[i].transform.SetParent(null);
+                hookedFishes[i].ResetFish();
+                num += hookedFishes[i].Type.price;
+            }
             //IdleManager totalGain = num
             //SceneManager EndScreen
         });
+    }
+
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if(target.CompareTag("Fish") && fishCount != strength)
+        {
+            fishCount++;
+            Fish component = target.GetComponent<Fish>();
+            component.Hooked();
+            hookedFishes.Add(component);
+            target.transform.SetParent(transform);
+            target.transform.position = hookTransform.position;
+            target.transform.rotation = hookTransform.rotation;
+            target.transform.localScale = Vector3.one;
+
+            target.transform.DOShakeRotation(5, Vector3.forward * 45, 10, 90, false).SetLoops(1, LoopType.Yoyo).OnComplete(delegate
+            {
+
+                target.transform.rotation = Quaternion.identity;
+            });
+        }
+
+        if(fishCount == strength)
+        {
+            StopFishing();
+        }
     }
 }
