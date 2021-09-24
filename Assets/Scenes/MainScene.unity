@@ -2800,6 +2800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2086886639}
   - component: {fileID: 2086886638}
+  - component: {fileID: 2086886640}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2842,6 +2843,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086886640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086886637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21979d3ef24fc4c419aad2db3f9adea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  length: 0
+  strength: 0
+  offlineEarnings: 0
+  lengthCost: 0
+  strengthCost: 0
+  offlineEarningsCost: 0
+  wallet: 0
+  totalGained: 0
 --- !u!1 &2097856992
 GameObject:
   m_ObjectHideFlags: 0
