@@ -201,7 +201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 17545533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086886640}
+        m_MethodName: CollectMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &17545533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &99446668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -889,7 +900,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 521901706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086886640}
+        m_MethodName: BuyOfflineEarnings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &521901706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,7 +964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &604034464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1769,7 +1791,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1510154007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086886640}
+        m_MethodName: CollectMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1510154007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2103,7 +2136,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1657190925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086886640}
+        m_MethodName: BuyLength
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1657190925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2509,7 +2553,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1806971731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086886640}
+        m_MethodName: CollectDoubleMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1806971731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2801,6 +2856,7 @@ GameObject:
   - component: {fileID: 2086886639}
   - component: {fileID: 2086886638}
   - component: {fileID: 2086886640}
+  - component: {fileID: 2086886641}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2863,6 +2919,35 @@ MonoBehaviour:
   offlineEarningsCost: 0
   wallet: 0
   totalGained: 0
+--- !u!114 &2086886641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086886637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828790fabb6fe4809be9cddb85942ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScreen: {fileID: 0}
+  endScreen: {fileID: 2126618881}
+  gameScreen: {fileID: 99446667}
+  mainScreen: {fileID: 1606496699}
+  returnScreen: {fileID: 604034463}
+  lengthButton: {fileID: 1657190924}
+  strengthButton: {fileID: 2097856994}
+  offlineButton: {fileID: 521901705}
+  gameScreenMoney: {fileID: 482706236}
+  lengthCostText: {fileID: 121181038}
+  lengthValueText: {fileID: 1363887448}
+  strengthCostText: {fileID: 1217546453}
+  strengthValueText: {fileID: 2100259018}
+  offlineCostText: {fileID: 1504226217}
+  offlineValueText: {fileID: 1449618991}
+  endScreenMoney: {fileID: 1999735058}
+  returnScreenMoney: {fileID: 1708909573}
 --- !u!1 &2097856992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,7 +3029,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2097856995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086886640}
+        m_MethodName: BuyStrength
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2097856995
 MonoBehaviour:
   m_ObjectHideFlags: 0
